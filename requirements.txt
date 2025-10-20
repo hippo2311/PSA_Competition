@@ -10,3 +10,4 @@ python-docx
 tzdata
 streamlit
 gspread
+openpyxl
