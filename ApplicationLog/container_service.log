@@ -1,0 +1,8 @@
+2025-10-09T08:15:12.104Z INFO  container-service Started ContainerService version=1.0.0 build=local
+2025-10-09T08:15:12.215Z INFO  db Flyway baseline complete schema=appdb version=1.0.0
+2025-10-09T08:15:12.420Z INFO  container-repo FetchLatestSnapshot cntr_no=CMAU0000020
+2025-10-09T08:15:12.422Z DEBUG sql SELECT * FROM container WHERE cntr_no=? ORDER BY created_at DESC LIMIT 1 params=[CMAU0000020]
+2025-10-09T08:15:12.515Z INFO  container-repo InsertSnapshot cntr_no=CMAU0000020 status=DISCHARGED created_at=2025-10-09T08:15:12Z
+2025-10-09T08:15:12.516Z WARN  container-version DuplicateSnapshotAttempt cntr_no=CMAU0000020 existing_created_at=2025-10-09T08:15:11Z
+2025-10-09T08:15:12.745Z INFO  api PublishEvent type=CONTAINER_UPDATED cntr_no=CMAU0000020 correlation_id=corr-cont-0001
+2025-10-09T08:15:12.912Z INFO  http 200 POST /api/containers/CMAU0000020 latency_ms=187

@@ -1,0 +1,9 @@
+vessel_advice_no,vessel_name,system_vessel_name,effective_start_datetime,effective_end_datetime,created_at,system_vessel_name_active
+1000010400,"MV Merlion 12","MV Merlion 12","2025-08-01 00:00:00","2025-09-01 00:00:00","2025-10-19 13:31:43",NULL
+1000010500,"MV Lion City 08","MV Lion City 08","2025-09-15 00:00:00","2025-10-01 00:00:00","2025-10-19 13:31:43",NULL
+1000010600,"MV Merlion 12","MV Merlion 12","2025-09-05 00:00:00","2025-09-20 00:00:00","2025-10-19 13:31:43",NULL
+1000010700,"MV Merlion 15","MV Merlion 15","2025-09-10 00:00:00","2025-09-25 00:00:00","2025-10-19 13:31:43",NULL
+1000010960,"MV Lion City 07","MV Lion City 07","2025-10-01 00:00:00",NULL,"2025-10-19 13:31:43","MV Lion City 07"
+1000010961,"MV Lion City 08","MV Lion City 08","2025-10-01 00:00:00",NULL,"2025-10-19 13:31:43","MV Lion City 08"
+1000010962,"MV Merlion 11","MV Merlion 11","2025-10-02 00:00:00",NULL,"2025-10-19 13:31:43","MV Merlion 11"
+1000010963,"MV Merlion 15","MV Merlion 15","2025-09-25 00:00:00",NULL,"2025-10-19 13:31:43","MV Merlion 15"

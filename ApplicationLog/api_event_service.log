@@ -1,0 +1,10 @@
+2025-10-09T08:25:33.050Z INFO  api-event-service Boot version=1.0.0 commit=dev
+2025-10-09T08:25:33.152Z INFO  scheduler ScheduleLoaded jobs=3
+2025-10-09T08:25:33.460Z INFO  event-consumer Received event_type=GATE_IN cntr_no=MSCU0000006 correlation_id=corr-api-0005
+2025-10-09T08:25:33.462Z DEBUG json {"gate":"B2","truck":"SGL1234Z"}
+2025-10-09T08:25:33.560Z INFO  api-repo Persist api_event_id=101 type=GATE_IN status=200 container_id=6
+2025-10-09T08:25:33.661Z INFO  http 201 POST /events latency_ms=121
+2025-10-09T08:25:33.910Z INFO  event-consumer Received event_type=LOAD cntr_no=MSCU0000007 correlation_id=corr-api-0006
+2025-10-09T08:25:33.912Z DEBUG json {"stow":"11-06-07"}
+2025-10-09T08:25:34.010Z INFO  api-repo Persist api_event_id=102 type=LOAD status=200 container_id=7
+2025-10-09T08:25:34.112Z INFO  http 201 POST /events latency_ms=104

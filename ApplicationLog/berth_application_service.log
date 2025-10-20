@@ -1,0 +1,8 @@
+2025-10-09T08:35:44.220Z INFO  berth-app-service Boot version=1.0.0
+2025-10-09T08:35:45.220Z INFO  advice-repo FetchActive system_vessel_name="MV Lion City 08" vessel_advice_no=1000010961
+2025-10-09T08:35:45.221Z DEBUG sql SELECT vessel_advice_no, system_vessel_name FROM vessel_advice WHERE system_vessel_name=? AND effective_end_datetime IS NULL params=[MV Lion City 08]
+2025-10-09T08:35:45.320Z INFO  berth-repo OpenApplication vessel_advice_no=1000010961 application_no=2
+2025-10-09T08:35:45.421Z INFO  http 201 POST /berth-applications latency_ms=101
+2025-10-09T08:35:45.530Z INFO  berth-repo CloseApplication application_no=2 reason=SCHEDULE_CHANGE
+2025-10-09T08:35:45.631Z INFO  berth-repo ArchiveApplication application_no=2 deleted=A
+2025-10-09T08:35:45.732Z INFO  http 200 PATCH /berth-applications/2/close latency_ms=202

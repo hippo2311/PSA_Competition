@@ -1,0 +1,7 @@
+2025-10-09T08:30:10.001Z INFO  vessel-registry Boot version=1.0.0
+2025-10-09T08:30:10.103Z INFO  db MigrationComplete applied=5
+2025-10-09T08:30:10.304Z INFO  cache Warmup vessels_cached=20 ms=42
+2025-10-09T08:30:10.410Z INFO  vessel-repo Lookup imo_no=9300007 result=FOUND vessel_id=7
+2025-10-09T08:30:10.511Z INFO  vessel-repo UpdateFlag vessel_id=7 old_flag="Hong Kong" new_flag="Singapore" user=sys
+2025-10-09T08:30:10.612Z WARN  validation FlagStateChange frequency=HIGH vessel_id=7 last_change_minutes=3
+2025-10-09T08:30:10.713Z INFO  http 200 PATCH /vessels/9300007 latency_ms=203

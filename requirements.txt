@@ -1,0 +1,12 @@
+requests
+pandas
+numpy
+mysql-connector-python
+sentence-transformers
+faiss-cpu
+pdfplumber
+reportlab
+python-docx
+tzdata
+streamlit
+gspread

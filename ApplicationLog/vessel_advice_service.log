@@ -1,0 +1,5 @@
+2025-10-08T09:14:12.379Z INFO  AdviceController corrId=9fa2e7c1afad4d6a httpMethod=POST path="/api/v1/vessel-advice" clientIp=10.10.0.41 contentType="application/json" payloadDigest=sha256:9f0c2d9
+2025-10-08T09:14:12.381Z INFO  AdviceService    corrId=9fa2e7c1afad4d6a action=prepareCreate vesselName="MV Lion City 07" system_vessel_name="MV Lion City 07" effStart=2025-10-07T00:00:00Z
+2025-10-08T09:14:12.412Z DEBUG AdviceRepository corrId=9fa2e7c1afad4d6a sql="INSERT INTO vessel_advice (vessel_name, system_vessel_name, effective_start_datetime) VALUES (?,?,?)" params=[MV Lion City 07,MV Lion City 07,2025-10-07 00:00:00]
+2025-10-08T09:14:12.419Z ERROR AdviceService    corrId=9fa2e7c1afad4d6a code=VESSEL_ERR_4 msg="System Vessel Name has been used by other vessel advice" sqlState=23000 sqlError=1062 key=uk_system_vessel_name_active system_vessel_name="MV Lion City 07" adviceState=ACTIVE
+2025-10-08T09:14:12.420Z INFO  AdviceController corrId=9fa2e7c1afad4d6a httpStatus=409 responseBody="{\"code\":\"VESSEL_ERR_4\",\"message\":\"Local Vessel Name has been used by other vessel advice\"}" durationMs=41

@@ -1,0 +1,25 @@
+# Mock application log demonstrating EDI message processing
+# File: edi_message_processing.log
+# Timestamp format: ISO-8601 UTC
+
+2025-10-03T08:01:12.379Z INFO  EDIController corrId=f1c3f7f8a9ab1234 httpMethod=POST path="/api/v1/edi-message" clientIp=10.10.1.25 contentType="application/json" payloadDigest=sha256:bcf73d1
+2025-10-03T08:01:12.381Z INFO  EDIService    corrId=f1c3f7f8a9ab1234 action=processIncoming messageType="COPARN" sentAt=2025-10-03T08:01:00Z
+2025-10-03T08:01:12.412Z DEBUG EDIRepository corrId=f1c3f7f8a9ab1234 sql="INSERT INTO edi_message (container_id, vessel_id, message_type, direction, status, message_ref, sender, receiver, sent_at) VALUES (?,?,?,?,?,?,?,?,?)" params=[1,1,'COPARN','IN','PARSED','REF-COP-0001','LINE-PSA','PSA-TOS','2025-10-03 08:01:00']
+2025-10-03T08:01:12.419Z INFO  EDIController corrId=f1c3f7f8a9ab1234 httpStatus=200 responseBody="{\"status\":\"PARSED\",\"message\":\"EDI message processed successfully\"}" durationMs=45
+
+2025-10-03T08:05:32.421Z INFO  EDIController corrId=e9a7b2f9a3b7cd76 httpMethod=POST path="/api/v1/edi-message" clientIp=10.10.1.26 contentType="application/json" payloadDigest=sha256:afd2f2d
+2025-10-03T08:05:32.423Z INFO  EDIService    corrId=e9a7b2f9a3b7cd76 action=processIncoming messageType="COPARN" sentAt=2025-10-03T08:05:00Z
+2025-10-03T08:05:32.445Z DEBUG EDIRepository corrId=e9a7b2f9a3b7cd76 sql="INSERT INTO edi_message (container_id, vessel_id, message_type, direction, status, message_ref, sender, receiver, sent_at) VALUES (?,?,?,?,?,?,?,?,?)" params=[2,2,'COPARN','IN','PARSED','REF-COP-0002','LINE-PSA','PSA-TOS','2025-10-03 08:05:00']
+2025-10-03T08:05:32.452Z INFO  EDIController corrId=e9a7b2f9a3b7cd76 httpStatus=200 responseBody="{\"status\":\"PARSED\",\"message\":\"EDI message processed successfully\"}" durationMs=40
+
+2025-10-04T12:25:10.498Z INFO  EDIController corrId=ab72d0a1e9f8f9cd httpMethod=POST path="/api/v1/edi-message" clientIp=10.10.1.30 contentType="application/json" payloadDigest=sha256:bf2d9c7
+2025-10-04T12:25:10.500Z INFO  EDIService    corrId=ab72d0a1e9f8f9cd action=processIncoming messageType="IFTMIN" sentAt=2025-10-04T12:25:00Z
+2025-10-04T12:25:10.522Z DEBUG EDIRepository corrId=ab72d0a1e9f8f9cd sql="INSERT INTO edi_message (container_id, vessel_id, message_type, direction, status, message_ref, sender, receiver, sent_at) VALUES (?,?,?,?,?,?,?,?,?)" params=[7,7,'IFTMIN','IN','ERROR','REF-IFT-0007','LINE-PSA','PSA-TOS','2025-10-04 12:25:00']
+2025-10-04T12:25:10.529Z ERROR EDIService    corrId=ab72d0a1e9f8f9cd code=EDI_ERR_1 msg="Segment missing" sqlState=23000 sqlError=1062 key=uk_message_ref_error message_ref="REF-IFT-0007" sender="LINE-PSA" receiver="PSA-TOS" errorText="Segment missing"
+2025-10-04T12:25:10.531Z INFO  EDIController corrId=ab72d0a1e9f8f9cd httpStatus=400 responseBody="{\"code\":\"EDI_ERR_1\",\"message\":\"Segment missing\"}" durationMs=42
+
+2025-10-05T12:35:45.567Z INFO  EDIController corrId=f3b7b1a1e4f6a2d1 httpMethod=POST path="/api/v1/edi-message" clientIp=10.10.1.31 contentType="application/json" payloadDigest=sha256:c7393d0
+2025-10-05T12:35:45.570Z INFO  EDIService    corrId=f3b7b1a1e4f6a2d1 action=processIncoming messageType="IFTMIN" sentAt=2025-10-05T12:35:00Z
+2025-10-05T12:35:45.591Z DEBUG EDIRepository corrId=f3b7b1a1e4f6a2d1 sql="INSERT INTO edi_message (container_id, vessel_id, message_type, direction, status, message_ref, sender, receiver, sent_at) VALUES (?,?,?,?,?,?,?,?,?)" params=[8,8,'IFTMIN','IN','PARSED','REF-IFT-0010','LINE-PSA','PSA-TOS','2025-10-05 12:35:00']
+2025-10-05T12:35:45.598Z INFO  EDIController corrId=f3b7b1a1e4f6a2d1 httpStatus=200 responseBody="{\"status\":\"PARSED\",\"message\":\"EDI message processed successfully\"}" durationMs=35
+
